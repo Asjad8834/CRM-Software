@@ -10,6 +10,12 @@ const dashboardRoutes = require("./routes/dashboard.route");
 app.use(cors());
 app.use(express.json());
 
+//Root route for showing on render
+// Root route
+app.get("/", (req, res) => {
+  res.send("CRM Backend is running successfully 🚀");
+});
+
 // Routes
 app.use("/api/contacts", contactRoutes);
 app.use("/api/interactions", interactionRoutes);
