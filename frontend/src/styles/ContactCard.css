@@ -1,0 +1,73 @@
+.contact-card {
+  background-color: #16213e;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #1f2f5a;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.interest-badge {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-info {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.card-footer {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.followup-badge {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: #a55eea;
+  color: #fff;
+  font-weight: 600;
+}
