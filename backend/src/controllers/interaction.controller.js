@@ -1,4 +1,4 @@
-
+const mongoose = require("mongoose");
 const interactionModel = require("../models/Interaction.model");
 const contactModel = require("../models/Contact.model");
 

@@ -1,4 +1,4 @@
-
+const mongoose = require("mongoose");
 const contactModel = require("../models/Contact.model");
 
 //Get all contacts
@@ -137,7 +137,7 @@ const updateContact = async (req, res)=>{
       });
 
       if(existingContact){
-        res.status(400).json({
+        return res.status(400).json({
           message:"Another contact with this email already exists"
         })
       }
@@ -168,7 +168,7 @@ const updateContact = async (req, res)=>{
       contact: updatedContact
     })
   }
-  catch(errro){
+  catch(error){
     res.status(500).json({
       message:"Errro updatimg contact",
       error: error.message

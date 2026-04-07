@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const contactModel = require("../models/Contact.model");
 
 const getDashboardStats = async (req, res) => {
