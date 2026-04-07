@@ -45,16 +45,16 @@ const createInteraction = async (req, res) => {
   try {
     const {
       contactId,
-      type,
+      outcome,
       date,
       notes,
       followUpRequired
     } = req.body;
 
     // Validate required fields
-    if (!contactId || !type || !date) {
+    if (!contactId || !outcome || !date || !notes) {
       return res.status(400).json({
-        message: "contactId, type, and date are required"
+        message: "contactId, outcome, date, and notes are required"
       });
     }
 
@@ -76,7 +76,7 @@ const createInteraction = async (req, res) => {
 
     const newInteraction = new interactionModel({
       contactId,
-      type,
+      outcome,
       date,
       notes,
       followUpRequired
@@ -116,7 +116,7 @@ const updateInteraction = async (req, res) => {
     }
 
     const {
-      type,
+      outcome,
       date,
       notes,
       followUpRequired
@@ -125,7 +125,7 @@ const updateInteraction = async (req, res) => {
     const updatedInteraction = await interactionModel.findByIdAndUpdate(
       id,
       {
-        type,
+        outcome,
         date,
         notes,
         followUpRequired
