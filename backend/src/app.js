@@ -15,8 +15,10 @@ app.use(cors({
     "http://localhost:3000",
     "https://crm-software-plum.vercel.app"
   ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
 app.use(express.json());
 
 //Root route for showing on render
