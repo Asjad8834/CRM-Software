@@ -161,3 +161,19 @@
   flex-direction: column;
   gap: 16px;
 }
+
+.btn-edit {
+  background: none;
+  border: 1px solid #4e9af1;
+  color: #4e9af1;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-edit:hover {
+  background-color: #4e9af1;
+  color: #fff;
+}

@@ -83,19 +83,23 @@ function ContactDetail() {
   if (loading) return <p className="loading">Loading contact...</p>;
   if (!contact) return <p className="loading">Contact not found.</p>;
 
-  return (
-    <div className="detail-page">
-      {/* Header */}
-      <div className="detail-header">
-        <button className="btn-back" onClick={() => navigate('/contacts')}>
-          ← Back
+return (
+  <div>
+    <div className="detail-header">
+      <button className="btn-back" onClick={() => navigate('/contacts')}>
+        ← Back
+      </button>
+      <div style={{ display: 'flex', gap: '12px' }}>
+        <button className="btn-edit" onClick={() => navigate(`/contacts/${id}/edit`)}>
+          ✏️ Edit Contact
         </button>
         <button className="btn-delete" onClick={handleDelete}>
           🗑 Delete Contact
         </button>
       </div>
+    </div>
 
-      {/* Contact Info Card */}
+    {/* Contact Info Card */}
       <div className="detail-card">
         <div className="detail-top">
           <div>
@@ -181,6 +185,7 @@ function ContactDetail() {
                 key={interaction._id}
                 interaction={interaction}
                 onDelete={handleDeleteInteraction}
+                onUpdate={fetchInteractions}
               />
             ))}
           </div>
