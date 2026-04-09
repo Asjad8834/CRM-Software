@@ -5,6 +5,7 @@ import Contacts from './pages/Contacts';
 import ContactDetail from './pages/ContactDetail';
 import AddContact from './pages/AddContact';
 import EditContact from './pages/EditContact';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/contacts/:id" element={<ContactDetail />} />
           <Route path="/contacts/:id/edit" element={<EditContact />} />
         </Routes>
+        <Analytics />
       </div>
     </BrowserRouter>
   );
